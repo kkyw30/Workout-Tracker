@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style> 
+.button {
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px; 
+}
+
+.button1 {background-color: red;} /*Red*/
+.button2 {background-color: blue;}  /*Blue*/ 
+</style>
+</head>
+<body>
+    <h1>Workout Tracker</h1>
+    <script src="tracker.js"></script>
+    <button class="button button1", onclick="document.getElementById('demo').innerHTML = addWorkout()">Add workout</button>
+    <button class="button button2", onclick="document.getElementById('exercise').innerHTML = addExercise()">Add exercise</button> 
+</body>
+<main>
+    <script src="tracker.js"></script>
+    <div class="container">
+        <ul class="workout-tracker js-workout-tracker"></ul>
+        <div class="empty-state">
+            <svg class="checklist-icon"><use href="#checklist-icon"></use></svg>
+            <h2 class="empty-state__title">Add your workouts here</h2>
+        </div>
+        <form id="workout", action="", method="POST">
+            <input autofocus type="text" aria-label="Enter a new workout" placeholder="E.g. Leg Day" class="js-todo-input"> 
+            <field label="Exercise1", action="", method="POST">
+                <input autofocus type="text" aria-label="Enter exercise" placeholder="E.g. Squats" class="js-todo-input">
+            </field>
+            <field label="Exercise2", action="", method="POST">
+                <input autofocus type="text" aria-label="Enter exercise" placeholder="E.g. Deadlifts" class="js-todo-input">
+            </field>
+        </form>
+    </div>
+</main>
+</html>
